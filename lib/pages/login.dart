@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:appcat/utility/validate.dart';
+import 'package:http/http.dart';
 
 class LogIn extends StatefulWidget {
   @override
@@ -14,6 +17,9 @@ class _LogInState extends State<LogIn> {
   @override
   bool _validate = false;
   bool _obcureText = true;
+
+  String _username ;
+  String _password ;
 
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.yellow.shade100,
@@ -48,7 +54,10 @@ class _LogInState extends State<LogIn> {
   Widget btnLogin() => Container(
         width: 250,
         child: RaisedButton(
-          onPressed: () {},
+          onPressed: () {
+            print("username: $_username");
+            print("password: $_password");
+          },
           color: Colors.yellow.shade700,
           child: Text(
             'Log In',
@@ -69,6 +78,7 @@ class _LogInState extends State<LogIn> {
   Widget userForm() => Container(
         width: 250,
         child: TextField(
+          onChanged: (String str){ _username = str; },
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.yellow.shade50,
@@ -88,6 +98,7 @@ class _LogInState extends State<LogIn> {
         child: Column(
           children: <Widget>[
             TextField(
+              onChanged: (String str){ _password = str; },
               autofocus: false,
               obscureText: _obcureText,
               keyboardType: TextInputType.text,
