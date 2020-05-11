@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -34,7 +35,8 @@ class _HomepageState extends State<Homepage> {
             ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+              },
               child: ListTile(
                 title: Text('Home Page'),
                 leading: Icon(Icons.home, color: Colors.red),
@@ -77,7 +79,9 @@ class _HomepageState extends State<Homepage> {
             )
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LogIn()),);
+              },
               child: ListTile(
                 title: Text('About'),
                 leading: Icon(Icons.help, color: Colors.blue),
