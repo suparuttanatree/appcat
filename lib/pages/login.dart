@@ -22,7 +22,7 @@ class _LogInState extends State<LogIn> {
   String _password ;
 
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.yellow.shade100,
+    return Scaffold(backgroundColor: Colors.yellow.shade300,
       // appBar: AppBar(
       //   elevation: 0.2,
       //   backgroundColor: Colors.yellow.shade700,
@@ -37,7 +37,9 @@ class _LogInState extends State<LogIn> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Icon(Icons.person,size: 100,) ,
+                Image.asset("images/logo.png",width: 250,height: 250,),
+                new Text("แมวอ้วนเตรียมสอบ",style: TextStyle(color: Colors.yellow.shade700,fontSize: 30,fontWeight: FontWeight.bold,),),
+                // Icon(Icons.person,size: 100,) ,
                 space(),
                 userForm(),
                 space(),

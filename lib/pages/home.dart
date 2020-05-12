@@ -13,10 +13,10 @@ class _HomepageState extends State<Homepage> {
 
       
 
-      backgroundColor: Colors.yellow[100],
+      backgroundColor: Colors.yellow.shade100,
       appBar: new AppBar(
         elevation: 0.2,
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.yellow.shade700,
         title: Text('Fat cats'),
         actions: <Widget>[
 
@@ -30,11 +30,12 @@ class _HomepageState extends State<Homepage> {
               accountEmail: Text('fm.buapan@gmail.com'),
             currentAccountPicture: GestureDetector(
               child: new CircleAvatar(
-                backgroundColor: Colors.grey,
+                backgroundImage: AssetImage("images/logo.png"),
+                // backgroundColor: Colors.orange.shade800,
               ),
             ),
             decoration: new BoxDecoration(
-              color: Colors.yellow
+              color: Colors.yellow.shade700
             ),
             ),
             InkWell(
@@ -42,30 +43,30 @@ class _HomepageState extends State<Homepage> {
               },
               child: ListTile(
                 title: Text('Home Page'),
-                leading: Icon(Icons.home, color: Colors.red),
+                leading: Icon(Icons.home, color: Colors.yellow.shade700),
             )
             ),
             InkWell(
               onTap: (){},
               child: ListTile(
                 title: Text('My Account'),
-                leading: Icon(Icons.person, color: Colors.red),
+                leading: Icon(Icons.person, color: Colors.yellow.shade700),
             )
             ),
             InkWell(
               onTap: (){},
               child: ListTile(
                 title: Text('My Course'),
-                leading: Icon(Icons.shopping_basket, color: Colors.red),
+                leading: Icon(Icons.school, color: Colors.yellow.shade700),
             )
             ),
-            // InkWell(
-            //   onTap: (){},
-            //   child: ListTile(
-            //     title: Text('Shopping cart'),
-            //     leading: Icon(Icons.shopping_cart, color: Colors.red),
-            // )
-            // ),
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('My Score'),
+                leading: Icon(Icons.score, color: Colors.yellow.shade700),
+            )
+            ),
             InkWell(
               onTap: (){},
               child: ListTile(
@@ -77,7 +78,7 @@ class _HomepageState extends State<Homepage> {
             InkWell(
               onTap: (){},
               child: ListTile(
-                title: Text('Setting'),
+                title: Text('Settings'),
                 leading: Icon(Icons.settings, color: Colors.grey),
             )
             ),
