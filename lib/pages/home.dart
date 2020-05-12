@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -9,6 +10,25 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
+      Widget image_carousel = new Container(
+      height: 250,
+      child: new Carousel(
+        boxFit: BoxFit.cover,
+        images: [
+          AssetImage('images/news/news1.jpg'),
+          AssetImage('images/news/news2.jpg'),
+          AssetImage('images/news/news3.jpg'),
+          AssetImage('images/news/news4.jpg'),
+          AssetImage('images/news/news5.jpg'),
+        ],
+        autoplay: true,
+        animationCurve: Curves.fastOutSlowIn,
+        autoplayDuration: Duration(milliseconds: 2000),
+        dotSize: 4.0,
+        indicatorBgPadding: 4.0,
+        dotBgColor: Colors.transparent,
+      ),
+    );
     return Scaffold(
 
       
@@ -93,6 +113,25 @@ class _HomepageState extends State<Homepage> {
             ),
           ],
         )
+      ),
+            body: new ListView(
+        children: <Widget>[
+          image_carousel,
+          new Padding(padding: const EdgeInsets.all(8.0),
+          // child: new Text('Categorise'),
+          ),
+          // HorizontalList(),
+
+          new Padding(padding: const EdgeInsets.all(15.0),
+          // child: new Text('Recent products'),
+          ),
+
+//        grid view
+          // Container(
+          //   height: 300,
+          //   child: Products(),
+          // )
+        ]
       ),
     );
   }
