@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class HorizontalList extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
+    return Container( 
+      height: 100,color: Colors.white,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[

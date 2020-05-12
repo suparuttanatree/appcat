@@ -25,10 +25,19 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
         ),
         backgroundColor: Colors.yellow[700],
+      //   Container(
+      //               decoration: new BoxDecoration(
+      //                 color: Colors.yellow[400],
+      //                 shape: BoxShape.circle,
+      //                 image: DecorationImage(
+      //                     image: AssetImage('images/news/news1.jpg'),
+      //                     fit: BoxFit.cover),
+      //               ),
+      // ),
       ),
       body: Container(
-        child: Column(
-          children: <Widget>[
+        child: ListView(
+          children: <Widget>[      
             InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -38,6 +47,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   title: Text('My Account'),
                   leading: Icon(Icons.person, color: Colors.yellow.shade700),
                 )),
+            Divider(),
             InkWell(
                 onTap: () {
                   Navigator.push(
@@ -49,12 +59,14 @@ class _SettingsPageState extends State<SettingsPage> {
                   title: Text('My Course'),
                   leading: Icon(Icons.school, color: Colors.yellow.shade700),
                 )),
+            Divider(),
             InkWell(
                 onTap: () {},
                 child: ListTile(
                   title: Text('My Score'),
                   leading: Icon(Icons.score, color: Colors.yellow.shade700),
                 )),
+            Divider(),
             InkWell(
                 onTap: () {},
                 child: ListTile(
@@ -68,6 +80,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   title: Text('Settings'),
                   leading: Icon(Icons.settings, color: Colors.grey),
                 )),
+            Divider(),
             InkWell(
                 onTap: () {
                   Navigator.push(
@@ -79,6 +92,43 @@ class _SettingsPageState extends State<SettingsPage> {
                   title: Text('About'),
                   leading: Icon(Icons.help, color: Colors.blue),
                 )),
+            Divider(),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LogIn()),
+                  );
+                },
+                child: ListTile(
+                  title: Text('About'),
+                  leading: Icon(Icons.help, color: Colors.blue),
+                )),
+            Divider(),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LogIn()),
+                  );
+                },
+                child: ListTile(
+                  title: Text('About'),
+                  leading: Icon(Icons.help, color: Colors.blue),
+                )),
+            Divider(),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LogIn()),
+                  );
+                },
+                child: ListTile(
+                  title: Text('About'),
+                  leading: Icon(Icons.help, color: Colors.blue),
+                )),
+            Divider(),
           ],
         ),
       ),

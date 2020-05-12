@@ -45,32 +45,34 @@ class _LogInState extends State<LogIn> {
       // ),
       body: Container(
         child: Center(
-          child: SingleChildScrollView(
-            child: Form(
-              key: _formKey,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Image.asset(
-                    "images/logo.png",
-                    width: 250,
-                    height: 250,
-                  ),
-                  new Text(
-                    "แมวอ้วนเตรียมสอบ",
-                    style: TextStyle(
-                      color: Colors.yellow.shade900,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
+          child: Container(
+            child: SingleChildScrollView(
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Image.asset(
+                      "images/logo.png",
+                      width: 250,
+                      height: 250,
                     ),
-                  ),
-                  // Icon(Icons.person,size: 100,) ,
-                  space(),
-                  userForm(),
-                  space(),
-                  pwdForm(),
-                  btnLogin(), btnRegister(),
-                ],
+                    new Text(
+                      "แมวอ้วนเตรียมสอบ",
+                      style: TextStyle(
+                        color: Colors.yellow.shade900,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    // Icon(Icons.person,size: 100,) ,
+                    space(),
+                    userForm(),
+                    space(),
+                    pwdForm(),
+                    btnLogin(), btnRegister(),
+                  ],
+                ),
               ),
             ),
           ),
@@ -95,8 +97,12 @@ class _LogInState extends State<LogIn> {
         child: RaisedButton(
           onPressed: () {
             setState(() {
-              _textUsr.text.isEmpty ? _validateUsr = true : _validateUsr = false;
-              _textPwd.text.isEmpty ? _validatePwd = true : _validatePwd = false;
+              _textUsr.text.isEmpty
+                  ? _validateUsr = true
+                  : _validateUsr = false;
+              _textPwd.text.isEmpty
+                  ? _validatePwd = true
+                  : _validatePwd = false;
             });
             print("username: $_username");
             print("password: $_password");
