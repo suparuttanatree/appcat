@@ -1,4 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:appcat/pages/courses.dart';
+import 'package:appcat/pages/home.dart';
+import 'package:appcat/pages/massages.dart';
+import 'package:appcat/pages/settings.dart';
+import 'package:appcat/pages/Answers.dart';
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:appcat/components/horizontal_listview.dart';
+import 'profile.dart';
+import 'login.dart';
+
+
 
 class AnswersPage extends StatefulWidget {
   @override
@@ -8,11 +19,18 @@ class AnswersPage extends StatefulWidget {
 class _AnswersPageState extends State<AnswersPage> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
-        title: new Text("Answers")
-      ),
-    );
+        elevation: 0.2,
+        backgroundColor: Colors.yellow.shade700,
+        title: Text('Answer'),
+        actions: <Widget>[
+          new IconButton(
+              icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
+        ],
+      ),);
+    
   }
 }

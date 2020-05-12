@@ -3,13 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:appcat/utility/validate.dart';
 import 'package:http/http.dart';
+import 'register.dart';
 
 class LogIn extends StatefulWidget {
   @override
   _LogInState createState() => _LogInState();
 }
-
-String _password;
 
 bool passwordVisible = false;
 
@@ -18,11 +17,12 @@ class _LogInState extends State<LogIn> {
   bool _validate = false;
   bool _obcureText = true;
 
-  String _username ;
-  String _password ;
+  String _username;
+  String _password;
 
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.yellow.shade300,
+    return Scaffold(
+      backgroundColor: Colors.yellow.shade200,
       // appBar: AppBar(
       //   elevation: 0.2,
       //   backgroundColor: Colors.yellow.shade700,
@@ -37,14 +37,26 @@ class _LogInState extends State<LogIn> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Image.asset("images/logo.png",width: 250,height: 250,),
-                new Text("แมวอ้วนเตรียมสอบ",style: TextStyle(color: Colors.yellow.shade700,fontSize: 30,fontWeight: FontWeight.bold,),),
+
+                Image.asset(
+                  "images/logo.png",
+                  width: 250,
+                  height: 250,
+                ),
+                new Text(
+                  "แมวอ้วนเตรียมสอบ",
+                  style: TextStyle(
+                    color: Colors.yellow.shade900,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 // Icon(Icons.person,size: 100,) ,
                 space(),
                 userForm(),
                 space(),
                 pwdForm(),
-                btnLogin()
+                btnLogin(), btnRegister(),
               ],
             ),
           ),
@@ -52,6 +64,11 @@ class _LogInState extends State<LogIn> {
       ),
     );
   }
+
+  FlatButton btnRegister() => FlatButton.icon(
+      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));},
+      icon: Icon(Icons.person_add, color: Colors.yellow.shade700),
+      label: Text('Register', style: TextStyle(fontSize:15, color: Colors.black38),));
 
   Widget btnLogin() => Container(
         width: 250,
@@ -80,7 +97,9 @@ class _LogInState extends State<LogIn> {
   Widget userForm() => Container(
         width: 250,
         child: TextField(
-          onChanged: (String str){ _username = str; },
+          onChanged: (String str) {
+            _username = str;
+          },
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.yellow.shade50,
@@ -100,7 +119,9 @@ class _LogInState extends State<LogIn> {
         child: Column(
           children: <Widget>[
             TextField(
-              onChanged: (String str){ _password = str; },
+              onChanged: (String str) {
+                _password = str;
+              },
               autofocus: false,
               obscureText: _obcureText,
               keyboardType: TextInputType.text,
@@ -128,7 +149,8 @@ class _LogInState extends State<LogIn> {
                 ),
               ),
             ),
-            Container(alignment: Alignment.topRight,
+            Container(
+              alignment: Alignment.topRight,
               child: FlatButton(
                 onPressed: () {},
                 child: Text(
@@ -140,7 +162,7 @@ class _LogInState extends State<LogIn> {
                       decoration: TextDecoration.underline),
                 ),
               ),
-            )
+            ),
           ],
         ),
       );

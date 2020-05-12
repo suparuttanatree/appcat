@@ -11,12 +11,12 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage()
-      // home: MyBottmNavigationBar()
-
+      //home: Homepage()
+      home : BottmNavigationBar()
     )
   );
 }
+
 
 class MyBottmNavigationBar extends StatefulWidget {
   @override
@@ -34,7 +34,7 @@ class _MyBottmNavigationBarState extends State<MyBottmNavigationBar> {
       SettingsPage()
   ];
 
-  void onTappedBar(int index){
+  void _onTappedBar(int index){
     setState(() {
       _currentIndex = index;
     });
@@ -44,32 +44,25 @@ class _MyBottmNavigationBarState extends State<MyBottmNavigationBar> {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: _children[_currentIndex],
-      // backgroundColor: Colors.yellow.shade600,
+      backgroundColor: Colors.yellow.shade600,
       bottomNavigationBar: BottomNavigationBar(
-        onTap: onTappedBar,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: new Text("Home")
-          ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.contacts),
-          //   title: new Text("Answer")
-          // ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.library_books),
-          //   title: new Text("Course")
-          // ),
+              icon: Icon(Icons.home), title: new Text("Home")),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            title: new Text("Massage")
-          ),
+              icon: Icon(Icons.question_answer), title: new Text("Answer")),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            title: new Text("Me")
-          ),
-        ]
-        ),
+              icon: Icon(Icons.library_books), title: new Text("Course")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.message), title: new Text("Massage")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), title: new Text("Me")),
+        ],
+        currentIndex: _currentIndex,
+        selectedItemColor: Colors.yellow.shade800,
+        onTap: _onTappedBar,
+        unselectedItemColor: Colors.grey[800],
+      ),
     );
   }
 }
