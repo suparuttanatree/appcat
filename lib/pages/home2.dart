@@ -1,35 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:appcat/pages/home.dart';
-import 'package:appcat/pages/home2.dart';
 import 'package:appcat/pages/courses.dart';
 import 'package:appcat/pages/home3.dart';
 import 'package:appcat/pages/massages.dart';
 import 'package:appcat/pages/settings.dart';
 import 'package:appcat/pages/Answers.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Homepage()
-      // home: MyBottmNavigationBar()
-
-    )
-  );
-}
-
-class MyBottmNavigationBar extends StatefulWidget {
+class BottmNavigationBar extends StatefulWidget {
   @override
-  _MyBottmNavigationBarState createState() => _MyBottmNavigationBarState();
+  _BottmNavigationBarState createState() => _BottmNavigationBarState();
 }
 
-class _MyBottmNavigationBarState extends State<MyBottmNavigationBar> {
+class _BottmNavigationBarState extends State<BottmNavigationBar> {
 
   int _currentIndex = 0;
   final List<Widget> _children = [
       HomePage3(),
-      // AnswersPage(),
-      // CoursesPage(),
+      AnswersPage(),
+      CoursesPage(),
       MassagesPage(),
       SettingsPage()
   ];
@@ -44,7 +31,7 @@ class _MyBottmNavigationBarState extends State<MyBottmNavigationBar> {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: _children[_currentIndex],
-      // backgroundColor: Colors.yellow.shade600,
+      backgroundColor: Colors.yellow.shade600,
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTappedBar,
         items: [
@@ -52,14 +39,14 @@ class _MyBottmNavigationBarState extends State<MyBottmNavigationBar> {
             icon: Icon(Icons.home),
             title: new Text("Home")
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.contacts),
-          //   title: new Text("Answer")
-          // ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.library_books),
-          //   title: new Text("Course")
-          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.question_answer),
+            title: new Text("Answer")
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: new Text("Course")
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
             title: new Text("Massage")
