@@ -55,6 +55,10 @@ flutter:
     - images/news/news3.jpg
     - images/news/news4.jpg
     - images/news/news5.jpg
+    - images/categorise/categorise1.png
+    - images/categorise/categorise2.png
+    - images/categorise/categorise3.png
+    - images/categorise/categorise4.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:appcat/components/horizontal_listview.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _HomepageState extends State<Homepage> {
         ],
         autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
-        autoplayDuration: Duration(milliseconds: 2000),
+        autoplayDuration: Duration(milliseconds: 4000),
         dotSize: 4.0,
         indicatorBgPadding: 4.0,
         dotBgColor: Colors.transparent,
@@ -39,7 +40,7 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: Colors.yellow.shade700,
         title: Text('Fat cats'),
         actions: <Widget>[
-
+          new IconButton(icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
         ],
       ),
       drawer: new Drawer(
@@ -118,9 +119,9 @@ class _HomepageState extends State<Homepage> {
         children: <Widget>[
           image_carousel,
           new Padding(padding: const EdgeInsets.all(8.0),
-          // child: new Text('Categorise'),
+          child: new Text('Categorise'),
           ),
-          // HorizontalList(),
+          HorizontalList(),
 
           new Padding(padding: const EdgeInsets.all(15.0),
           // child: new Text('Recent products'),
