@@ -6,6 +6,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final _formKey = GlobalKey<FormState>();
   String _usr, _pwd, _repwd, _email;
   @override
   Widget build(BuildContext context) {

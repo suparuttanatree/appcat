@@ -13,12 +13,24 @@ class LogIn extends StatefulWidget {
 bool passwordVisible = false;
 
 class _LogInState extends State<LogIn> {
+  final _formKey = GlobalKey<FormState>();
   @override
-  bool _validate = false;
+  bool _validateUsr = false;
+  bool _validatePwd = false;
   bool _obcureText = true;
 
   String _username;
   String _password;
+
+  final _textUsr = TextEditingController();
+  final _textPwd = TextEditingController();
+
+  @override
+  void dispose() {
+    _textUsr.dispose();
+    _textPwd.dispose();
+    super.dispose();
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,30 +46,32 @@ class _LogInState extends State<LogIn> {
       body: Container(
         child: Center(
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-
-                Image.asset(
-                  "images/logo.png",
-                  width: 250,
-                  height: 250,
-                ),
-                new Text(
-                  "แมวอ้วนเตรียมสอบ",
-                  style: TextStyle(
-                    color: Colors.yellow.shade900,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Image.asset(
+                    "images/logo.png",
+                    width: 250,
+                    height: 250,
                   ),
-                ),
-                // Icon(Icons.person,size: 100,) ,
-                space(),
-                userForm(),
-                space(),
-                pwdForm(),
-                btnLogin(), btnRegister(),
-              ],
+                  new Text(
+                    "แมวอ้วนเตรียมสอบ",
+                    style: TextStyle(
+                      color: Colors.yellow.shade900,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  // Icon(Icons.person,size: 100,) ,
+                  space(),
+                  userForm(),
+                  space(),
+                  pwdForm(),
+                  btnLogin(), btnRegister(),
+                ],
+              ),
             ),
           ),
         ),
@@ -66,14 +80,24 @@ class _LogInState extends State<LogIn> {
   }
 
   FlatButton btnRegister() => FlatButton.icon(
-      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));},
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Register()));
+      },
       icon: Icon(Icons.person_add, color: Colors.yellow.shade700),
-      label: Text('Register', style: TextStyle(fontSize:15, color: Colors.black38),));
+      label: Text(
+        'Register',
+        style: TextStyle(fontSize: 15, color: Colors.black38),
+      ));
 
   Widget btnLogin() => Container(
         width: 250,
         child: RaisedButton(
           onPressed: () {
+            setState(() {
+              _textUsr.text.isEmpty ? _validateUsr = true : _validateUsr = false;
+              _textPwd.text.isEmpty ? _validatePwd = true : _validatePwd = false;
+            });
             print("username: $_username");
             print("password: $_password");
           },
@@ -97,6 +121,7 @@ class _LogInState extends State<LogIn> {
   Widget userForm() => Container(
         width: 250,
         child: TextField(
+          controller: _textUsr,
           onChanged: (String str) {
             _username = str;
           },
@@ -106,6 +131,7 @@ class _LogInState extends State<LogIn> {
             prefixIcon: Icon(Icons.person, color: Colors.yellow.shade900),
             labelStyle: TextStyle(color: Colors.yellow.shade900),
             labelText: 'Username : ',
+            errorText: _validateUsr ? 'Please Enter Username !! ' : null,
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.yellow.shade700)),
             focusedBorder: OutlineInputBorder(
@@ -118,7 +144,8 @@ class _LogInState extends State<LogIn> {
         width: 250,
         child: Column(
           children: <Widget>[
-            TextField(
+            TextFormField(
+              controller: _textPwd,
               onChanged: (String str) {
                 _password = str;
               },
@@ -131,6 +158,7 @@ class _LogInState extends State<LogIn> {
                 prefixIcon: Icon(Icons.lock, color: Colors.yellow.shade900),
                 labelStyle: TextStyle(color: Colors.yellow.shade900),
                 labelText: 'Password : ',
+                errorText: _validatePwd ? 'Please Enter Password !! ' : null,
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.yellow.shade700)),
                 focusedBorder: OutlineInputBorder(
@@ -166,4 +194,11 @@ class _LogInState extends State<LogIn> {
           ],
         ),
       );
+
+  String validatePwd(String value) {
+    if (!(value.length > 5) && value.isNotEmpty) {
+      return " Password should contains more then 5 character ";
+    }
+    return null;
+  }
 }
