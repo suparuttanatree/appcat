@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:appcat/components/horizontal_listview.dart';
+import 'package:appcat/pages/courses.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -31,9 +32,6 @@ class _HomepageState extends State<Homepage> {
       ),
     );
     return Scaffold(
-
-      
-
       backgroundColor: Colors.yellow.shade100,
       appBar: new AppBar(
         elevation: 0.2,
@@ -61,6 +59,7 @@ class _HomepageState extends State<Homepage> {
             ),
             InkWell(
               onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage()),);
               },
               child: ListTile(
                 title: Text('Home Page'),
@@ -75,7 +74,9 @@ class _HomepageState extends State<Homepage> {
             )
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CoursesPage()),);
+              },
               child: ListTile(
                 title: Text('My Course'),
                 leading: Icon(Icons.school, color: Colors.yellow.shade700),

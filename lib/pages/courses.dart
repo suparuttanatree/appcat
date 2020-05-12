@@ -11,7 +11,12 @@ class _CoursesPageState extends State<CoursesPage> {
     return Scaffold(
       backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
-        title: new Text("Courses")
+        elevation: 0.2,
+        backgroundColor: Colors.yellow.shade700,
+        title: Text('My Course'),
+        actions: <Widget>[
+          new IconButton(icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
+        ],
       ),
     );
   }
