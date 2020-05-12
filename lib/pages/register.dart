@@ -9,6 +9,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+<<<<<<< HEAD
 
 //================================================================== register to database =================================================
   // Boolean variable for CircularProgressIndicator.
@@ -56,6 +57,9 @@ class _RegisterState extends State<Register> {
  //===========================================================================================================================================
 }
 
+=======
+  final _formKey = GlobalKey<FormState>();
+>>>>>>> db6263e4d170fd60fc157669b7913ac2ff813760
   String _usr, _pwd, _repwd, _email;
   @override
   Widget build(BuildContext context) {

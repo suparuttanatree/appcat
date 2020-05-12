@@ -7,6 +7,7 @@ import 'package:appcat/pages/Answers.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:appcat/components/horizontal_listview.dart';
 import 'login.dart';
+import 'package:flutter/services.dart';
 
 class BottmNavigationBar extends StatefulWidget {
   @override
