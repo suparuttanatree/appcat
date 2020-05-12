@@ -1,11 +1,61 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class Register extends StatefulWidget {
+  
   @override
   _RegisterState createState() => _RegisterState();
 }
 
 class _RegisterState extends State<Register> {
+
+//================================================================== register to database =================================================
+  // Boolean variable for CircularProgressIndicator.
+  bool visible = false ;
+
+  Future userRegistration() async{
+    // Showing CircularProgressIndicator.
+    setState(() {
+    visible = true ; 
+    });
+
+    String username = _usr;
+    String email = _email;
+    String password = _pwd;
+
+    var url = "https://waterqua.000webhostapp.com/register_user.php";
+
+    var data = {'username': username, 'email': email, 'password' : password};
+
+    var response = await http.post(url, body: json.encode(data));
+
+    // var message = jsonDecode(response.body);
+
+    if(response.statusCode == 200){
+    setState(() {
+    visible = false; 
+    });
+  }
+  //   showDialog(
+  // context: context,
+  // builder: (BuildContext context) {
+  //   return AlertDialog(
+  //     title: new Text(message),
+  //     actions: <Widget>[
+  //       FlatButton(
+  //         child: new Text("OK"),
+  //         onPressed: () {
+  //           Navigator.of(context).pop();
+  //         },
+  //       ),
+  //     ],
+  //   );
+  // },
+  // );
+ //===========================================================================================================================================
+}
+
   String _usr, _pwd, _repwd, _email;
   @override
   Widget build(BuildContext context) {
@@ -145,9 +195,9 @@ class _RegisterState extends State<Register> {
             width: 250,
             child: RaisedButton(
               color: Colors.yellow.shade700,
-              onPressed: () {
-                print("info : $_usr , $_pwd , $_repwd , $_email");
-              },
+              onPressed: (){}
+              // userRegistration
+              ,
               child: Text(
                 'Register',
                 style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
