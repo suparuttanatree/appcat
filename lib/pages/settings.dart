@@ -93,42 +93,6 @@ class _SettingsPageState extends State<SettingsPage> {
                   leading: Icon(Icons.help, color: Colors.blue),
                 )),
             Divider(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LogIn()),
-                  );
-                },
-                child: ListTile(
-                  title: Text('About'),
-                  leading: Icon(Icons.help, color: Colors.blue),
-                )),
-            Divider(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LogIn()),
-                  );
-                },
-                child: ListTile(
-                  title: Text('About'),
-                  leading: Icon(Icons.help, color: Colors.blue),
-                )),
-            Divider(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LogIn()),
-                  );
-                },
-                child: ListTile(
-                  title: Text('About'),
-                  leading: Icon(Icons.help, color: Colors.blue),
-                )),
-            Divider(),
           ],
         ),
       ),

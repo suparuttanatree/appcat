@@ -30,7 +30,8 @@ class _AnswersPageState extends State<AnswersPage> {
           new IconButton(
               icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
         ],
-      ),);
+      ),
+      );
     
   }
 }
