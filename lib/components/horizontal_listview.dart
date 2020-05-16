@@ -9,19 +9,19 @@ class HorizontalList extends StatelessWidget {
         children: <Widget>[
           Category(
               image_location: 'images/categorise/categorise1.png',
-              image_caption: 'categorise1'),
+              image_caption: 'ประเมินคณะ'),
           Category(
               image_location: 'images/categorise/categorise2.png',
-              image_caption: 'categorise2'),
+              image_caption: 'ทบทวน'),
           Category(
               image_location: 'images/categorise/categorise3.png',
-              image_caption: 'categorise3'),
+              image_caption: 'แนะแนว'),
           Category(
               image_location: 'images/categorise/categorise4.png',
-              image_caption: 'categorise4'),
-          Category(
-              image_location: 'images/categorise/categorise1.png',
-              image_caption: 'categorise1'),
+              image_caption: 'จำลองสอบ'),
+          // Category(
+          //     image_location: 'images/categorise/categorise1.png',
+          //     image_caption: 'categorise5'),
         ],
       ),
     );

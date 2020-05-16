@@ -6,6 +6,7 @@ import 'package:appcat/pages/courses.dart';
 import 'profile.dart';
 import 'package:appcat/main.dart';
 import 'package:appcat/utility/mystlye.dart';
+import 'package:appcat/components/products.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -54,21 +55,22 @@ class _HomepageState extends State<Homepage> {
           new Padding(
             
             padding: const EdgeInsets.all(8.0),
-            child: new Text('Categories',style: TextStyle(fontSize: 15 , fontWeight: FontWeight.bold),),
+            child: new Text('หมวดหมู่',style: TextStyle(fontSize: 15 , fontWeight: FontWeight.bold),),
           ),
           HorizontalList(),
 
           new Padding(
             padding: const EdgeInsets.all(15.0),
-            // child: new Text('Recent products'),
+            child: new Text('แนะนำ',style: TextStyle(fontSize: 15 , fontWeight: FontWeight.bold),),
           ),
 
-//        grid view
-          // Container(
-          //   height: 300,
-          //   child: Products(),
-          // )
-        ]),
+      //  grid view
+          Container(
+            height: 360,
+            child: Products(),
+          )
+        ]
+        ),
       ),
     );
   }
