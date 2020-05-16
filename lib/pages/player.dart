@@ -11,7 +11,7 @@ class PlayerPage extends StatelessWidget {
       appBar: new AppBar(
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
-        title: Text('ทบทวนเนื้อหาฟิสิกส์'),
+        title: Text('ทบทวนเนื้อหาฟิสิกส์',style: TextStyle(fontFamily:'Omyim',fontSize: 40)),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
         ],
@@ -30,7 +30,7 @@ class PlayerPage extends StatelessWidget {
           //   ),
           //   looping: false,
           // ),
-          Text('1.แรงเสียดทาน Part:1'),
+          Text('1.แรงเสียดทาน Part:1',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
           VideosListItem(
             videoPlayerController: VideoPlayerController.network(
               'https://firebasestorage.googleapis.com/v0/b/emmashop-40a28.appspot.com/o/%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%99%20p.1.mp4?alt=media&token=d3287d08-3e6f-481b-803c-873924cd5b9b',
@@ -38,7 +38,7 @@ class PlayerPage extends StatelessWidget {
             looping: false,
           ),
           Divider(),
-          Text('2.แรงเสียดทาน Part:2'),
+          Text('2.แรงเสียดทาน Part:2',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
           VideosListItem(
             videoPlayerController: VideoPlayerController.network(
               'https://firebasestorage.googleapis.com/v0/b/emmashop-40a28.appspot.com/o/%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%99%20p.2.mp4?alt=media&token=e04c8c64-4eb4-4702-b28e-01af0a865161',

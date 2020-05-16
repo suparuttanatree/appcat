@@ -35,14 +35,12 @@ class _LogInState extends State<LogIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.yellow.shade200,
-      // appBar: AppBar(
-      //   elevation: 0.2,
-      //   backgroundColor: Colors.yellow.shade700,
-      //   title: Text(
-      //     'Log In',
-      //     style: TextStyle(fontWeight: FontWeight.bold),
-      //   ),
-      // ),
+      appBar: AppBar(
+        elevation: 0.2,
+        backgroundColor: Colors.yellow.shade700,
+        title: Text(
+          'Log In',style: TextStyle(fontFamily:'Omyim',fontSize: 50)),
+      ),
       body: Container(
         child: Center(
           child: Container(
@@ -60,8 +58,9 @@ class _LogInState extends State<LogIn> {
                     new Text(
                       "แมวอ้วนเตรียมสอบ",
                       style: TextStyle(
+                        fontFamily:'Omyim',
                         color: Colors.yellow.shade900,
-                        fontSize: 30,
+                        fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -89,7 +88,7 @@ class _LogInState extends State<LogIn> {
       icon: Icon(Icons.person_add, color: Colors.yellow.shade700),
       label: Text(
         'Register',
-        style: TextStyle(fontSize: 15, color: Colors.black38),
+        style: TextStyle(fontFamily:'Omyim',fontSize: 30, color: Colors.black38),
       ));
 
   Widget btnLogin() => Container(
@@ -103,7 +102,9 @@ class _LogInState extends State<LogIn> {
               _textPwd.text.isEmpty
                   ? _validatePwd = true
                   : _validatePwd = false;
-            });
+            }
+            
+            );
             print("username: $_username");
             print("password: $_password");
           },
@@ -111,9 +112,9 @@ class _LogInState extends State<LogIn> {
           child: Text(
             'Log In',
             style: TextStyle(
+              fontFamily:'Omyim',
               color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+              fontSize: 35,
             ),
           ),
         ),
@@ -135,7 +136,7 @@ class _LogInState extends State<LogIn> {
             filled: true,
             fillColor: Colors.yellow.shade50,
             prefixIcon: Icon(Icons.person, color: Colors.yellow.shade900),
-            labelStyle: TextStyle(color: Colors.yellow.shade900),
+            labelStyle: TextStyle(fontFamily:'Omyim',fontSize: 25,color: Colors.yellow.shade900),
             labelText: 'Username : ',
             errorText: _validateUsr ? 'Please Enter Username !! ' : null,
             enabledBorder: OutlineInputBorder(
@@ -162,7 +163,7 @@ class _LogInState extends State<LogIn> {
                 filled: true,
                 fillColor: Colors.yellow.shade50,
                 prefixIcon: Icon(Icons.lock, color: Colors.yellow.shade900),
-                labelStyle: TextStyle(color: Colors.yellow.shade900),
+                labelStyle: TextStyle(fontFamily:'Omyim',fontSize: 25,color: Colors.yellow.shade900),
                 labelText: 'Password : ',
                 errorText: _validatePwd ? 'Please Enter Password !! ' : null,
                 enabledBorder: OutlineInputBorder(
@@ -190,9 +191,9 @@ class _LogInState extends State<LogIn> {
                 child: Text(
                   'Forgot Password?',
                   style: TextStyle(
+                      fontFamily:'Omyim',
                       color: Colors.blue.shade300,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
                       decoration: TextDecoration.underline),
                 ),
               ),

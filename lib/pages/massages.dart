@@ -13,7 +13,7 @@ class _MassagesPageState extends State<MassagesPage> {
       appBar: new AppBar(
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
-        title: Text('Massage'),
+        title: Text('Massage',style: TextStyle(fontFamily:'Omyim',fontSize: 50)),
         actions: <Widget>[
           // new IconButton(
           //     icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),

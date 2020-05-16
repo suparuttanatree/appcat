@@ -25,7 +25,7 @@ class _AnswersPageState extends State<AnswersPage> {
       appBar: new AppBar(
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
-        title: Text('Answer'),
+        title: Text('Answer',style: TextStyle(fontFamily:'Omyim',fontSize: 50)),
         actions: <Widget>[
           new IconButton(
               icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),

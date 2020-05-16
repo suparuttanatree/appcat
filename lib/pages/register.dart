@@ -14,10 +14,8 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
-        title: Text('Register',
-              style: TextStyle(fontWeight: FontWeight.bold),
-              textAlign: TextAlign.left),
-      ),backgroundColor: Colors.yellow[300],
+        title: Text('Register',style: TextStyle(fontFamily:'Omyim',fontSize: 50)),
+      ),backgroundColor: Colors.yellow[200],
       body: Container(
         child: ListView(
           padding: EdgeInsets.all(30),
@@ -49,7 +47,7 @@ class _RegisterState extends State<Register> {
                 filled: true,
                 fillColor: Colors.yellow.shade50,
                 prefixIcon: Icon(Icons.person, color: Colors.yellow.shade900),
-                labelStyle: TextStyle(color: Colors.yellow.shade900),
+                labelStyle: TextStyle(color: Colors.yellow.shade900,fontFamily:'Omyim',fontSize: 25),
                 labelText: 'Username : ',
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.yellow.shade700)),
@@ -75,7 +73,7 @@ class _RegisterState extends State<Register> {
                 filled: true,
                 fillColor: Colors.yellow.shade50,
                 prefixIcon: Icon(Icons.person, color: Colors.yellow.shade900),
-                labelStyle: TextStyle(color: Colors.yellow.shade900),
+                labelStyle: TextStyle(color: Colors.yellow.shade900,fontFamily:'Omyim',fontSize: 25),
                 labelText: 'Password : ',
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.yellow.shade700)),
@@ -101,7 +99,7 @@ class _RegisterState extends State<Register> {
                 filled: true,
                 fillColor: Colors.yellow.shade50,
                 prefixIcon: Icon(Icons.person, color: Colors.yellow.shade900),
-                labelStyle: TextStyle(color: Colors.yellow.shade900),
+                labelStyle: TextStyle(color: Colors.yellow.shade900,fontFamily:'Omyim',fontSize: 25),
                 labelText: 'Re - Password : ',
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.yellow.shade700)),
@@ -127,7 +125,7 @@ class _RegisterState extends State<Register> {
                 filled: true,
                 fillColor: Colors.yellow.shade50,
                 prefixIcon: Icon(Icons.person, color: Colors.yellow.shade900),
-                labelStyle: TextStyle(color: Colors.yellow.shade900),
+                labelStyle: TextStyle(color: Colors.yellow.shade900,fontFamily:'Omyim',fontSize: 25),
                 labelText: 'E-mail : ',
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.yellow.shade700)),
@@ -151,7 +149,7 @@ class _RegisterState extends State<Register> {
               },
               child: Text(
                 'Register',
-                style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily:'Omyim',fontSize: 30,color: Colors.white, fontWeight: FontWeight.bold),
               ),
             ),
           )

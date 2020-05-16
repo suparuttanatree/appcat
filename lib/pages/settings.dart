@@ -19,10 +19,7 @@ class _SettingsPageState extends State<SettingsPage> {
       backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
         title: new Text(
-          "Settings",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          "Settings",style: TextStyle(fontFamily:'Omyim',fontSize: 50)
         ),
         backgroundColor: Colors.yellow[700],
       //   Container(
@@ -44,7 +41,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       MaterialPageRoute(builder: (context) => Profile()));
                 },
                 child: ListTile(
-                  title: Text('My Account'),
+                  title: Text('My Account',style: TextStyle(fontFamily:'Omyim',fontSize: 25)),
                   leading: Icon(Icons.person, color: Colors.yellow.shade700),
                 )),
             Divider(),
@@ -56,28 +53,28 @@ class _SettingsPageState extends State<SettingsPage> {
                   );
                 },
                 child: ListTile(
-                  title: Text('My Course'),
+                  title: Text('My Course',style: TextStyle(fontFamily:'Omyim',fontSize: 25)),
                   leading: Icon(Icons.school, color: Colors.yellow.shade700),
                 )),
             Divider(),
             InkWell(
                 onTap: () {},
                 child: ListTile(
-                  title: Text('My Score'),
+                  title: Text('My Score',style: TextStyle(fontFamily:'Omyim',fontSize: 25)),
                   leading: Icon(Icons.score, color: Colors.yellow.shade700),
                 )),
             Divider(),
             InkWell(
                 onTap: () {},
                 child: ListTile(
-                  title: Text('Favourites'),
+                  title: Text('Favourites',style: TextStyle(fontFamily:'Omyim',fontSize: 25)),
                   leading: Icon(Icons.favorite, color: Colors.red),
                 )),
             Divider(),
             InkWell(
                 onTap: () {},
                 child: ListTile(
-                  title: Text('Settings'),
+                  title: Text('Settings',style: TextStyle(fontFamily:'Omyim',fontSize: 25)),
                   leading: Icon(Icons.settings, color: Colors.grey),
                 )),
             Divider(),
@@ -89,7 +86,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   );
                 },
                 child: ListTile(
-                  title: Text('About'),
+                  title: Text('About',style: TextStyle(fontFamily:'Omyim',fontSize: 25)),
                   leading: Icon(Icons.help, color: Colors.blue),
                 )),
             Divider(),

@@ -41,7 +41,7 @@ class _HomepageState extends State<Homepage> {
       appBar: new AppBar(
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
-        title: Text('Fat cats'),
+        title: Text('Fat cats',style: TextStyle(fontFamily:'Omyim',fontSize: 50),),
         actions: <Widget>[
           new IconButton(
               icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
@@ -55,18 +55,18 @@ class _HomepageState extends State<Homepage> {
           new Padding(
             
             padding: const EdgeInsets.all(8.0),
-            child: new Text('หมวดหมู่',style: TextStyle(fontSize: 15 , fontWeight: FontWeight.bold),),
+            child: new Text('หมวดหมู่',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
           ),
           HorizontalList(),
 
           new Padding(
             padding: const EdgeInsets.all(15.0),
-            child: new Text('แนะนำ',style: TextStyle(fontSize: 15 , fontWeight: FontWeight.bold),),
+            child: new Text('แนะนำ',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
           ),
 
       //  grid view
           Container(
-            height: 360,
+            height: 340,
             child: Products(),
           )
         ]

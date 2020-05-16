@@ -15,7 +15,7 @@ class _CoursesPageState extends State<CoursesPage> {
       appBar: new AppBar(
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
-        title: Text('My Course'),
+        title: Text('My Course',style: TextStyle(fontFamily:'Omyim',fontSize: 50)),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
         ],
@@ -24,7 +24,7 @@ class _CoursesPageState extends State<CoursesPage> {
         // new Text('\tบทเรียนของฉัน',style: TextStyle(fontSize: 20),),
         child: ListView(
           children: <Widget>[      
-            new Text('\tบทเรียนของฉัน',style: TextStyle(fontSize: 20),),
+            new Text('\tบทเรียนของฉัน',style: TextStyle(fontFamily:'Omyim',fontSize: 40)),
             Divider(),
             InkWell(
                 onTap: () {
@@ -32,7 +32,7 @@ class _CoursesPageState extends State<CoursesPage> {
                       MaterialPageRoute(builder: (context) => PlayerPage()));
                 },
                 child: ListTile(
-                  title: Text('ทบทวนเนื้อหาฟิสิกส์'),
+                  title: Text('ทบทวนเนื้อหาฟิสิกส์',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
                   leading: Image.asset('images/products/product7.jpg'),
                 )),
             Divider(),
@@ -44,14 +44,14 @@ class _CoursesPageState extends State<CoursesPage> {
                   // );
                 },
                 child: ListTile(
-                  title: Text('ติวเข้ม PAT2'),
+                  title: Text('ติวเข้ม PAT2',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
                   leading: Image.asset('images/products/product5.jpg'),
                 )),
             Divider(),
             InkWell(
                 onTap: () {},
                 child: ListTile(
-                  title: Text('ติวเข้ม PAT3'),
+                  title: Text('ติวเข้ม PAT3',style: TextStyle(fontFamily:'Omyim',fontSize: 30)),
                   leading: Image.asset('images/products/product6.jpg'),
                 )),
             Divider(),

@@ -51,9 +51,8 @@ class Category extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   child: Text(
                     image_caption,
-                    style: new TextStyle(
-                      fontSize: 12,
-                    ),
+                    style: TextStyle(fontFamily:'Omyim',fontSize: 16)
+
                   ),
                 ),
               ))),
