@@ -11,7 +11,13 @@ class _MassagesPageState extends State<MassagesPage> {
     return Scaffold(
       backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
-        title: new Text("Massages")
+        elevation: 0.2,
+        backgroundColor: Colors.yellow.shade700,
+        title: Text('Massage'),
+        actions: <Widget>[
+          // new IconButton(
+          //     icon: Icon(Icons.search, color: Colors.white), onPressed: (null)),
+        ],
       ),
     );
   }

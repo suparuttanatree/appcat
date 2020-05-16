@@ -16,7 +16,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[200],
+      backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
         title: new Text(
           "Settings",
@@ -79,42 +79,6 @@ class _SettingsPageState extends State<SettingsPage> {
                 child: ListTile(
                   title: Text('Settings'),
                   leading: Icon(Icons.settings, color: Colors.grey),
-                )),
-            Divider(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LogIn()),
-                  );
-                },
-                child: ListTile(
-                  title: Text('About'),
-                  leading: Icon(Icons.help, color: Colors.blue),
-                )),
-            Divider(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LogIn()),
-                  );
-                },
-                child: ListTile(
-                  title: Text('About'),
-                  leading: Icon(Icons.help, color: Colors.blue),
-                )),
-            Divider(),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LogIn()),
-                  );
-                },
-                child: ListTile(
-                  title: Text('About'),
-                  leading: Icon(Icons.help, color: Colors.blue),
                 )),
             Divider(),
             InkWell(

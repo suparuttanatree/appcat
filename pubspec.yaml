@@ -33,7 +33,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  chewie: ^0.9.10
   http: any
 
   flutter_launcher_icons: "^0.7.3"
@@ -67,6 +67,13 @@ flutter:
     - images/categorise/categorise2.png
     - images/categorise/categorise3.png
     - images/categorise/categorise4.png
+    - images/products/product1.jpg
+    - images/products/product2.jpg
+    - images/products/product3.jpg
+    - images/products/product4.jpg
+    - images/products/product5.jpg
+    - images/products/product6.jpg
+    - images/products/product7.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
