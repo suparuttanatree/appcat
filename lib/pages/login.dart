@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:appcat/utility/validate.dart';
 import 'package:http/http.dart';
 import 'register.dart';
+import 'forgot_pwd.dart';
 
 class LogIn extends StatefulWidget {
   @override
@@ -187,7 +188,9 @@ class _LogInState extends State<LogIn> {
             Container(
               alignment: Alignment.topRight,
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPwd()));
+                },
                 child: Text(
                   'Forgot Password?',
                   style: TextStyle(

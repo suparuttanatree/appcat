@@ -112,6 +112,8 @@ class _ProfileState extends State<Profile> {
                               contentPadding: EdgeInsets.only(
                                   left: 15, bottom: 11, top: 11, right: 15),
                               hintText: 'ชื่อ'),
+                          enabled: !_status,
+                          autofocus: !_status,
                         ),
                       ),
                     ),
@@ -128,6 +130,8 @@ class _ProfileState extends State<Profile> {
                             contentPadding: EdgeInsets.only(
                                 left: 15, bottom: 11, top: 11, right: 15),
                             hintText: 'นามสกุล'),
+                        enabled: !_status,
+                        autofocus: !_status,
                       ),
                     ),
                   )
@@ -177,7 +181,7 @@ class _ProfileState extends State<Profile> {
                             left: 15, bottom: 11, top: 11, right: 15),
                         hintText: 'Example@email.com',
                         border: InputBorder.none,
-                      ),
+                      ),enabled: !_status,
                     ),
                   ))
                 ],
@@ -202,8 +206,7 @@ class _ProfileState extends State<Profile> {
                       child: Container(
                         child: new Text(
                           'เบอร์โทรศัพท์ : ',
-                          style: TextStyle(
-                              fontSize: 25.0, fontFamily: 'Omyim'),
+                          style: TextStyle(fontSize: 25.0, fontFamily: 'Omyim'),
                         ),
                       ),
                       flex: 2,
@@ -229,7 +232,7 @@ class _ProfileState extends State<Profile> {
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.only(
                                   left: 15, bottom: 11, top: 11, right: 15),
-                              hintText: 'Emma , เอ็มม่า'),
+                              hintText: 'Emma , เอ็มม่า'),enabled: !_status,
                         ),
                       ),
                     ),
@@ -245,7 +248,7 @@ class _ProfileState extends State<Profile> {
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.only(
                                 left: 15, bottom: 11, top: 11, right: 15),
-                            hintText: '0888888888'),
+                            hintText: '0888888888'),enabled: !_status,
                       ),
                     ),
                   )
@@ -296,7 +299,7 @@ class _ProfileState extends State<Profile> {
                             left: 15, bottom: 11, top: 11, right: 15),
                         hintText: 'ที่อยู่',
                         border: InputBorder.none,
-                      ),
+                      ),enabled: !_status,
                     ),
                   ))
                 ],
@@ -368,8 +371,6 @@ class _ProfileState extends State<Profile> {
     super.dispose();
   }
 
-
-
   Column usrImg() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -425,7 +426,7 @@ class _ProfileState extends State<Profile> {
   Widget _getEditIcon() {
     return new GestureDetector(
       child: new CircleAvatar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.yellow[900],
         radius: 14.0,
         child: new Icon(
           Icons.edit,
