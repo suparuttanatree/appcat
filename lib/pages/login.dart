@@ -61,7 +61,7 @@ class _LogInState extends State<LogIn> {
                         fontFamily:'Omyim',
                         color: Colors.yellow.shade900,
                         fontSize: 50,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                       ),
                     ),
                     // Icon(Icons.person,size: 100,) ,
