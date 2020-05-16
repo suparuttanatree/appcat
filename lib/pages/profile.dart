@@ -16,33 +16,20 @@ class _ProfileState extends State<Profile> {
       ),
       body: Container(
         color: Colors.yellow[50],
-        child: Center(
+        child: Align(
+          alignment: Alignment.topCenter,
           child: Container(
+            padding: EdgeInsets.all(20),
+            margin: EdgeInsets.all(20),
+            width: 150,
+            height: 150,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                gradient: LinearGradient(
-                    colors: [Colors.yellow[100], Colors.yellowAccent[100]])),
-            margin: EdgeInsets.all(32),
-            padding: EdgeInsets.all(24),
-            child: ListView(
-              children: <Widget>[
-                Container(
-                  width: 200,
-                  height: 350,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.yellow[50],
-                    image: DecorationImage(
-                        image: AssetImage('images/news/news1.jpg'),
-                        fit: BoxFit.cover),
-                  ),
-                ),
-                TextField(onChanged: (value){},
-                  decoration: InputDecoration(
-                    
-                  ),
-                ),
-              ],
+              border: Border.all(color: Colors.yellow[700]),
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: AssetImage('images/news/news1.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
