@@ -232,7 +232,7 @@ class _ProfileState extends State<Profile> {
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.only(
                                   left: 15, bottom: 11, top: 11, right: 15),
-                              hintText: 'Emma , เอ็มม่า'),enabled: !_status,
+                              hintText: 'ชื่อเล่น'),enabled: !_status,
                         ),
                       ),
                     ),
@@ -248,7 +248,75 @@ class _ProfileState extends State<Profile> {
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.only(
                                 left: 15, bottom: 11, top: 11, right: 15),
-                            hintText: '0888888888'),enabled: !_status,
+                            hintText: '0123456789'),enabled: !_status,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+                padding: EdgeInsets.only(left: 10.0, right: 25.0, top: 25.0),
+                child: new Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        child: new Text(
+                          'Line ID : ',
+                          style: TextStyle(fontSize: 25.0, fontFamily: 'Omyim'),
+                        ),
+                      ),
+                      flex: 2,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: new Text(
+                          'Facebook : ',
+                          style: TextStyle(fontSize: 25.0, fontFamily: 'Omyim'),
+                        ),
+                      ),
+                      flex: 2,
+                    ),
+                  ],
+                )),
+            Padding(
+              padding: EdgeInsets.only(top: 5, right: 20, left: 20),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: TextField(
+                          decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              contentPadding: EdgeInsets.only(
+                                  left: 15, bottom: 11, top: 11, right: 15),
+                              hintText: 'Line ID'),enabled: !_status,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: TextField(
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(
+                                left: 15, bottom: 11, top: 11, right: 15),
+                            hintText: 'Facebook'),enabled: !_status,
                       ),
                     ),
                   )
@@ -305,6 +373,7 @@ class _ProfileState extends State<Profile> {
                 ],
               ),
             ),
+            
             !_status ? _getActionButtons() : new Container(),
           ],
         ),

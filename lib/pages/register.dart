@@ -15,7 +15,7 @@ class _RegisterState extends State<Register> {
         elevation: 0.2,
         backgroundColor: Colors.yellow.shade700,
         title: Text('Register',style: TextStyle(fontFamily:'Omyim',fontSize: 50)),
-      ),backgroundColor: Colors.yellow[200],
+      ),backgroundColor: Colors.yellow[100],
       body: Container(
         child: ListView(
           padding: EdgeInsets.all(30),
