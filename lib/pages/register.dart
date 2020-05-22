@@ -32,7 +32,6 @@ class _RegisterState extends State<Register> {
       ),
     );
   }
-
   Widget txtUsr() => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -58,7 +57,6 @@ class _RegisterState extends State<Register> {
           ),
         ],
       );
-
   Widget txtPwd() => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
